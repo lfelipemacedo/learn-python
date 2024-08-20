@@ -29,7 +29,18 @@ def opcao_invalida():
     menu_principal()
 
 def cadastrar_restaurante():
-    print('Cadastro de Restaurantes\n')
+    '''
+        Essa função é responsável para o cadastro de um novo restaurante
+        
+        Inputs:
+        - Nome do Restaurante
+        - Categoria do Restaurante
+        
+        Output:
+        - Adiciona um novo restaurante na lista de restaurantes
+    '''
+    
+    exibir_subtitulo('Cadastro de Restaurantes')
     
     nome_restaurante = input('Digite o nome do restaurante: ')
     categoria_restaurante = input(f'Digite a categoria do restaurante {nome_restaurante}: ')
@@ -40,12 +51,15 @@ def cadastrar_restaurante():
     menu_principal()
 
 def listar_restaurantes():
-    print('Restaurantes cadastrados:\n')
+    exibir_subtitulo('Restaurantes cadastrados:')
+    
     for restaurante in restaurantes:
-        print(f"- {restaurante['nome'].ljust(20)} | {restaurante['categoria']} | {'ativado' if restaurante['ativo'] else 'desativado'}")
+        print(f"- {restaurante['nome'].ljust(20)} | {restaurante['categoria'].ljust(20)} | {'Ativado' if restaurante['ativo'] else 'Desativado'}")
     menu_principal()
 
 def ativar_restaurante():
+    exibir_subtitulo("Ativar/Desativar Restaurante")
+    
     nome_restaurante = input('Digite o nome do restaurante que deseja ativar: ')
     
     for restaurante in restaurantes:
@@ -88,8 +102,17 @@ def escolher_opcao():
     except:
         opcao_invalida()
 
+def exibir_subtitulo(texto):
+    limpar_tela()
+    linha = '*' * (len(texto))
+    print(linha)
+    print(texto)
+    print(linha)
+    print()
+    
 def limpar_tela():
     os.system('clear')
+    
 def main():
     limpar_tela()
     iniciar_app()
