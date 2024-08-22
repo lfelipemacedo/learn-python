@@ -25,7 +25,7 @@ class Restaurante:
         print(f'{"Restaurante".ljust(25)} | {"Categoria".ljust(25)} | {"Ativo".ljust(25)} | {"Avaliação".ljust(25)}')
         for restaurante in cls.restaurantes:
             print(
-                f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {restaurante.ativo.ljust(25)} | {str(restaurante.media_avaliacao()).ljust(25)}')
+                f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {restaurante.ativo.ljust(25)} | {str(restaurante.media_avaliacao).ljust(25)}')
 
     def ativar(self):
         self._ativo = True
