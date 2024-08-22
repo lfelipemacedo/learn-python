@@ -6,6 +6,6 @@ Temas abordados:
 - Variáveis, estruturas de controle e manipulação de strings
 - Estruturas de dados, funções e exceptions
 - Orientação a Objetos: Classes, Herança, Polimorfismo
-- Requisições e maniputação de arquivos
+- Requisições e manipulação de arquivos
 - Criação de api em Fast API
 
